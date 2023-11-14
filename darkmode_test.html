@@ -1,0 +1,18 @@
+<html>
+    <head>
+          <style>
+    @media (prefers-color-scheme: light) {
+              :root { --mode: "light"; }
+                  }
+        @media (prefers-color-scheme: dark) {
+                  :root { --mode: "dark"; }
+                      }
+
+            body:before {
+                      color: red;
+                            content: var(--mode);
+                                }
+              </style>
+    </head>
+    <body></body>
+</html>
