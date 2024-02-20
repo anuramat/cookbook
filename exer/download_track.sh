@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 exer_dl_track() {
 	local lang="$1"
@@ -7,6 +7,6 @@ exer_dl_track() {
 		| xargs -n 1 -P 10 -I{} sh -c "exercism download --track $lang --force  --exercise {} || true"
 }
 
-[ -e "$1" ] || echo "Specify the track to download, eg: download_track.sh haskell" && exit
+[ -z "$1" ] && echo -e "ERROR: Specify the track to download, eg:\ndownload_track.sh haskell" && exit
 
 exer_dl_track "$1"
