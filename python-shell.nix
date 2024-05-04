@@ -3,15 +3,16 @@ let
 in
   pkgs.mkShell {
     packages = [
-      (pkgs.python3.withPackages (python-pkgs: [
-        python-pkgs.numpy
-        python-pkgs.matplotlib
-        python-pkgs.scikit-image
-        python-pkgs.jupyter
-        python-pkgs.torch
-        python-pkgs.torchvision
-        python-pkgs.pytorch-lightning
-        python-pkgs.jupyter-collaboration
-      ]))
+      (pkgs.python3.withPackages (python-pkgs:
+        with python-pkgs; [
+          numpy
+          matplotlib
+          scikit-image
+          jupyter
+          torch
+          torchvision
+          pytorch-lightning
+          jupyter-collaboration
+        ]))
     ];
   }
