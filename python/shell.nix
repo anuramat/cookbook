@@ -8,6 +8,7 @@ in
           numpy
           matplotlib
           scikit-image
+          scikit-learn
           jupyter
           torch
           torchvision
