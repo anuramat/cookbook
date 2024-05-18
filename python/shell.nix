@@ -1,5 +1,5 @@
 let
-  pkgs = import <nixpkgs> {};
+  pkgs = import <nixos> {};
 in
   pkgs.mkShell {
     packages = [
