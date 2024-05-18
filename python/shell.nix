@@ -5,15 +5,16 @@ in
     packages = [
       (pkgs.python3.withPackages (python-pkgs:
         with python-pkgs; [
-          numpy
+          jupyter-collaboration
+          jupyter
+          jupytext
           matplotlib
+          numpy
+          pytorch-lightning
           scikit-image
           scikit-learn
-          jupyter
           torch
           torchvision
-          pytorch-lightning
-          jupyter-collaboration
         ]))
     ];
   }
