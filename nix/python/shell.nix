@@ -9,6 +9,7 @@ in
           jupyter
           jupytext
           matplotlib
+          plotly
           numpy
           pytorch-lightning
           scikit-image

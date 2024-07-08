@@ -29,6 +29,7 @@
                 matplotlib
                 numpy
                 pyscf
+                plotly
                 pytorch-lightning
                 rdkit
                 scikit-image
