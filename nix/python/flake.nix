@@ -34,8 +34,8 @@
                 rdkit
                 scikit-image
                 scikit-learn
-                # torchWithCuda
-                torch
+                torchWithCuda
+                # torch
                 torchvision
               ]))
           ];
