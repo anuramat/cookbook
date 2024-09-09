@@ -14,7 +14,7 @@ in
           pytorch-lightning
           scikit-image
           scikit-learn
-          torch
+          torchWithCuda
           torchvision
         ]))
     ];
