@@ -24,19 +24,20 @@
             (pkgs.python3.withPackages (python-pkgs:
               with python-pkgs; [
                 # jupyter-collaboration
+                # torch
                 jupyter
                 jupytext
                 matplotlib
                 numpy
-                pyscf
                 plotly
+                pytest
                 pytorch-lightning
-                rdkit
                 scikit-image
                 scikit-learn
+                scipy
                 torchWithCuda
-                # torch
                 torchvision
+                tqdm
               ]))
           ];
         };
