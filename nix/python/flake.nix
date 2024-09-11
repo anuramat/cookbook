@@ -16,26 +16,30 @@
       system: let
         pkgs = import nixpkgs {
           inherit system;
-          config.allowUnfree = true;
+          config = {
+            allowUnfree = true;
+            cudaSupport = true;
+            cudnnSupoprt = true;
+          };
         };
-      in rec {
+      in {
         devShell = pkgs.mkShell {
           buildInputs = [
             (pkgs.python3.withPackages (python-pkgs:
               with python-pkgs; [
                 # jupyter-collaboration
-                # torch
                 jupyter
                 jupytext
                 matplotlib
                 numpy
                 plotly
                 pytest
-                pytorch-lightning
+                pytorch-lightning # import as `pytorch_lightning`
                 scikit-image
                 scikit-learn
                 scipy
-                torchWithCuda
+                tensorboard
+                torch
                 torchvision
                 tqdm
               ]))
