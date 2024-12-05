@@ -27,7 +27,6 @@
           buildInputs = [
             (pkgs.python3.withPackages (python-pkgs:
               with python-pkgs; [
-                # jupyter-collaboration
                 jupyter
                 jupytext
                 matplotlib
